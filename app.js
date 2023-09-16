@@ -24,20 +24,7 @@ function setData(){
 
   if(userId.value == '' || userPassword.value == ''){
     alert("All Fields are required");
-  } else {
-      loginBtn.innerHTML = `
-    <div class="dot-spinner">
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-      <div class="dot-spinner__dot"></div>
-    </div>
-    ` 
-  
+  } else {  
     set(ref(db, 'users/'+userId.value), {
         userId: userId.value,
         password : userPassword.value

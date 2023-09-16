@@ -21,7 +21,7 @@
   loginBtn.addEventListener('click', setData);
 
 function setData(){
-  if(userId.value && userPassword.value){
+  if(userId.value == '' || userPassword.value == ''){
     alert("All Fields are required");
   } else {
     set(ref(db, 'users/'+userId.value), {
